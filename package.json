@@ -28,5 +28,10 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "fp-ts": "^2.11.6",
+    "monocle-ts": "^2.3.11",
+    "newtype-ts": "^0.3.4"
   }
 }
