@@ -38,8 +38,7 @@ const arbitraryGraph1D: fc.Arbitrary<Graph<1>> = fc
           weight: [maxWeight],
         });
 
-        // possibly add a random lower-weight path between the two vertices; these are the
-
+        // possibly add a random lower-weight path between the two vertices
         // casts should always succeed because boolStream, weightStream are infinite
         if ((boolStream.next() as IteratorYieldResult<boolean>).value) {
           edgeBlueprints.push({

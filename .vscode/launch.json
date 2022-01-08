@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Node tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/jest",
+      "args": ["--runInBand", "--no-cache", "--watchAll=false", "--env=node"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": { "CI": "true" },
+      "disableOptimisticBPs": true
+    }
+  ]
+}
