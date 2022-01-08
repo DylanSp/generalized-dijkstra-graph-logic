@@ -13,7 +13,5 @@ describe("Graphs", () => {
       },
     ];
     const graph = createGraph(vertices, edges);
-
-    expect(graph).not.toBeNull();
   });
 });

@@ -1,3 +1,4 @@
+import { equal } from "assert";
 import * as fc from "fast-check";
 import { createGraph, Graph } from "../../src/fp/graph";
 import { findAllPaths, getTotalWeightOfPath, textbookDijkstra } from "../../src/fp/search";
@@ -54,6 +55,7 @@ const arbitraryGraph1D: fc.Arbitrary<Graph<1>> = fc
   });
 
 describe("Graph path search algorithms", () => {
+  /*
   describe("Finding all paths", () => {
     it("Two possible paths", () => {
       // Arrange
@@ -106,7 +108,7 @@ describe("Graph path search algorithms", () => {
       const allPaths = findAllPaths(graph, startVertex.id, endVertex.id);
 
       // Assert
-      expect(allPaths.size).toBe(2);
+      equal(allPaths.size, 2);
 
       // path through intermediateVertex1
       expect(Array.from(allPaths)).toEqual(
@@ -141,8 +143,10 @@ describe("Graph path search algorithms", () => {
       );
     });
   });
+  */
 
   describe("Textbook Dijkstra's algorithm (1-dimension weights)", () => {
+    /*
     it("Trivial example - two vertices, one edge", () => {
       // Arrange
       const vertex1: Vertex = {
@@ -278,6 +282,7 @@ describe("Graph path search algorithms", () => {
         }),
       );
     });
+    */
 
     it("Property-based test; out of all paths, the returned path has the lowest weight", () => {
       fc.assert(
@@ -294,7 +299,7 @@ describe("Graph path search algorithms", () => {
           const shortestPath = textbookDijkstra(graph, startVertex.id, endVertex.id);
           const shortestPathWeight = getTotalWeightOfPath(shortestPath);
 
-          expect(lowestWeight[0]).toEqual(shortestPathWeight[0]);
+          equal(lowestWeight[0], shortestPathWeight[0]);
         }),
       );
     });
