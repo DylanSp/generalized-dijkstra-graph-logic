@@ -1,4 +1,4 @@
-import { Edge, EdgeBlueprint, incrementEdgeID, isoEdgeID, Tuple, Vertex, VertexID } from "./types";
+import { Edge, EdgeBlueprint, incrementEdgeID, isoEdgeID, Tuple, Vertex, VertexID } from "../types";
 
 export class Graph<WeightDimensions extends number> {
   private vertices: Array<Vertex>;
