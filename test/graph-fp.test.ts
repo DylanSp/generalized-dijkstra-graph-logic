@@ -1,4 +1,4 @@
-import { createGraph } from "../src/graph";
+import { createGraph } from "../src/graph-fp";
 import { EdgeBlueprint, vertexIDIso } from "../src/types";
 
 describe("Graphs", () => {
