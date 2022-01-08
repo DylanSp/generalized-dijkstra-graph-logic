@@ -30,6 +30,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "fast-check": "^2.20.0",
     "fp-ts": "^2.11.6",
     "monocle-ts": "^2.3.11",
     "newtype-ts": "^0.3.4"

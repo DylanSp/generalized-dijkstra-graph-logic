@@ -1,5 +1,5 @@
-import { createGraph } from "../src/graph-fp";
-import { EdgeBlueprint, vertexIDIso } from "../src/types";
+import { createGraph } from "../../src/fp/graph";
+import { EdgeBlueprint, vertexIDIso } from "../../src/types";
 
 describe("Graphs", () => {
   it("Graph construction", () => {
